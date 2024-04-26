@@ -1,4 +1,8 @@
 from django.shortcuts import render
+from django.http import HttpResponseRedirect
+from django.urls import reverse
+from main.forms import NameForm
+from icecream import ic
 
 # Create your views here.
 
@@ -17,3 +21,16 @@ def get_data_by_form(request):
         print(name)
         
     return render(request, "main/form_data.html", {"name": name})
+
+def test_django_form(request):
+    context = {}
+    context["error"] = None
+    context["form"] = NameForm()
+    if request.method == "POST":
+        form = NameForm(request.POST)
+        if form.is_valid():
+            context["name"] = form.cleaned_data["your_name"]
+            return render(request, "main/django_form.html", context=context)
+        else:
+            context["error"] = "form was not validated."
+    return render(request, "main/django_form.html", context=context)

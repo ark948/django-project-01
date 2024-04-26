@@ -1,0 +1,20 @@
+{% extends "base.html" %}
+
+{% block content %}
+
+{% if error %}
+    {{ error }}
+{% endif %}
+
+<form action="{% url 'main:django_form' %}" method="post">
+    {% csrf_token %}
+        {{ form }}
+    <input type="submit" value="Submit">
+</form>
+
+<br>
+{% if name %}
+    {{ name }}
+{% endif %}
+
+{% endblock %}

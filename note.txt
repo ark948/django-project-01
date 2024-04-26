@@ -4,4 +4,7 @@
 > before that, having at least one admin is not a bad idea.
 > python manage.py migrate (applying migrations is required for creating a superuser)
 > python manage.py createsuperuser
-- before adding register or login views, let's try a sample post form and view
+- before adding register or login views, let's try a sample post form and view (done)
+i was able to send a receive data using simple html form.
+- now, according to django's doc, django has its own form building system. trying that now. (done)
+
