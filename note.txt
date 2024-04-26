@@ -8,3 +8,5 @@
 i was able to send a receive data using simple html form.
 - now, according to django's doc, django has its own form building system. trying that now. (done)
 
+- starting a new book, whithin this very project.
+- the pages app is from book.
