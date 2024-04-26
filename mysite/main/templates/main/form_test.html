@@ -1,0 +1,14 @@
+{% extends "base.html" %}
+
+{% block content %}
+
+<p>Test form</p>
+<form method="post" action="{% url 'main:get_data' %}">
+    {% csrf_token %}
+    <label for="name">Enter name:</label>
+    <input type="text" id="name" name="name" required>
+    <br>
+    <input type="submit" value="Send">
+</form>
+
+{% endblock %}

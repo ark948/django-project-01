@@ -3,5 +3,7 @@
 {% block content %}
 
 but this is index
+<p><a href="{% url 'admin:index' %}">link to admin panel</a></p>
+<p><a href="{% url 'main:send_data' %}">Send data</a></p>
 
 {% endblock %}

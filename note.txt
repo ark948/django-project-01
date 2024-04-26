@@ -1,1 +1,7 @@
 > django-admin startproject mysite
+- browser needed an 'empty cache and reload' to load the correct background image.
+- After initalizing the main app, it is needed to utilize django auth system
+> before that, having at least one admin is not a bad idea.
+> python manage.py migrate (applying migrations is required for creating a superuser)
+> python manage.py createsuperuser
+- before adding register or login views, let's try a sample post form and view
